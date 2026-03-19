@@ -343,17 +343,29 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
 </footer>
 
 <script>
+// BIST100 — Mart 2026 güncel liste
+// Kasım 2025 ticker değişiklikleri: KOZAL→TRALT, IPEKE→TRENJ
+// 1 Nisan 2026 değişiklikleri henüz yürürlükte değil (TTRAK, ULKER hâlâ endekste)
 const COMPANIES = [
-  'THYAO','EREGL','SISE','TUPRS','KCHOL','SAHOL','AKBNK','GARAN','ISCTR','YKBNK',
-  'HALKB','VAKBN','TKFEN','ARCLK','TOASO','FROTO','KOZAL','BIMAS','MGROS','ULKER',
-  'AEFES','CCOLA','TAVHL','PGSUS','TCELL','TTKOM','ASELS','VESTL','SODA','PETKM',
-  'ENKAI','OYAKC','KRDMD','GUBRF','AKCNS','BUCIM','CIMSA','AKSEN','ZOREN','ENJSA',
-  'EKGYO','ISGYO','TRGYO','DOHOL','AGHOL','LOGO','INDES','OTKAR','BRISA','TTRAK',
-  'TRKCM','ANACM','ALKIM','AYGAZ','KORDS','MAVI','AGESA','ANHYT','AKGRT','TSKB',
-  'SKBNK','ALBRK','MPARK','CLEBI','DEVA','ECILC','TATGD','BANVT','BRSAN','PARSN',
-  'SNGYO','GOLTS','HEKTS','BAGFS','MRSHL','KAREL','YUNSA','ISATR','LCATR','GSDHO',
-  'SELEC','NTTUR','GESAN','ODAS','IPEKE','CEMTS','NTHOL','BRYAT','KAPLM','DNISI',
-  'GENIL','DESA','KERVT','TPIC','KMPUR','EUPWR','BVSAN','KONTR'
+  // Büyük şirketler
+  'THYAO','ASELS','GARAN','ENKAI','TUPRS','KCHOL','AKBNK','ISCTR','FROTO','YKBNK',
+  'SAHOL','EREGL','SISE','TCELL','TTKOM','HALKB','TKFEN','ARCLK','TOASO','BIMAS',
+  // Orta büyüklük
+  'MGROS','AEFES','CCOLA','TAVHL','PGSUS','VESTL','SODA','PETKM','ENKAI','OYAKC',
+  'KRDMD','GUBRF','AKCNS','BUCIM','CIMSA','AKSEN','ZOREN','ENJSA','EKGYO','ISGYO',
+  'TRGYO','DOHOL','AGHOL','LOGO','INDES','OTKAR','BRISA','TRKCM','ANACM','ALKIM',
+  'AYGAZ','KORDS','MAVI','AGESA','ANHYT','AKGRT','TSKB','SKBNK','ALBRK','MPARK',
+  // Ticker değişiklikler (Kasım 2025)
+  'TRALT',  // eski KOZAL — Türk Altın İşletmeleri
+  'TRENJ',  // eski IPEKE — TR Doğal Enerji
+  // Diğerleri
+  'CLEBI','DEVA','ECILC','TATGD','BANVT','BRSAN','PARSN','SNGYO','GOLTS','HEKTS',
+  'BAGFS','MRSHL','KAREL','YUNSA','ISATR','LCATR','GSDHO','SELEC','NTTUR','GESAN',
+  'ODAS','CEMTS','NTHOL','BRYAT','KAPLM','DNISI','GENIL','DESA','KERVT','BVSAN',
+  // Hâlâ endekste (1 Nisan'a kadar)
+  'ULKER','TTRAK','VAKBN',
+  // Yeni girenler / diğer aktif BIST100 üyeleri
+  'PGSUS','KCAER','EGEEN','EUPWR','KONTR',
 ];
 
 const FINANCE_SECTORS = ['Finance','Insurance','Banks'];
