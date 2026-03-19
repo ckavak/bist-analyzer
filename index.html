@@ -776,42 +776,77 @@ function valuation(mos) {
 }
 
 // ============================================================
-// FETCH
+// FETCH — multiple proxy fallbacks
 // ============================================================
-const PROXY = 'https://corsproxy.io/?url=';
+const PROXIES = [
+  u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  u => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,
+  u => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}`,
+  u => `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(u)}`,
+];
+
+async function fetchWithProxy(targetUrl, timeoutMs = 10000) {
+  for (const proxy of PROXIES) {
+    try {
+      const r = await fetch(proxy(targetUrl), {
+        signal: AbortSignal.timeout(timeoutMs),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!r.ok) continue;
+      const text = await r.text();
+      if (!text || text.trim().startsWith('<')) continue; // HTML hata sayfası
+      return JSON.parse(text);
+    } catch { /* sonraki proxy'i dene */ }
+  }
+  return null;
+}
 
 async function fetchCompany(ticker) {
-  const url = encodeURIComponent(
-    `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}.IS?modules=defaultKeyStatistics,price`
-  );
+  // Önce v7/quote — daha hafif ve stabil
+  const quoteUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${ticker}.IS&fields=regularMarketPrice,trailingEps,bookValue,trailingPE,forwardPE,priceToBook`;
   try {
-    const r = await fetch(PROXY + url, { signal: AbortSignal.timeout(10000) });
-    if (!r.ok) throw new Error('http');
-    const d = await r.json();
-    const res = d.quoteSummary?.result?.[0];
-    if (!res) throw new Error('empty');
-    const stats = res.defaultKeyStatistics || {};
-    const price_obj = res.price || {};
-    return {
-      price: price_obj.regularMarketPrice?.raw ?? null,
-      eps:   stats.trailingEps?.raw ?? null,
-      bvps:  stats.bookValue?.raw ?? null,
-      pe:    stats.trailingPE?.raw ?? stats.forwardPE?.raw ?? null,
-      pb:    stats.priceToBook?.raw ?? null,
-    };
-  } catch {
-    // fallback: chart endpoint for at least price
-    try {
-      const r2 = await fetch(PROXY + encodeURIComponent(
-        `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}.IS?range=1d&interval=1d`
-      ), { signal: AbortSignal.timeout(8000) });
-      const d2 = await r2.json();
-      const meta = d2.chart?.result?.[0]?.meta;
-      return { price: meta?.regularMarketPrice ?? null, eps: null, bvps: null, pe: null, pb: null };
-    } catch {
-      return { price: null, eps: null, bvps: null, pe: null, pb: null };
+    const d = await fetchWithProxy(quoteUrl);
+    const q = d?.quoteResponse?.result?.[0];
+    if (q && q.regularMarketPrice) {
+      return {
+        price: q.regularMarketPrice   ?? null,
+        eps:   q.trailingEps          ?? null,
+        bvps:  q.bookValue            ?? null,
+        pe:    q.trailingPE ?? q.forwardPE ?? null,
+        pb:    q.priceToBook          ?? null,
+      };
     }
-  }
+  } catch { /* devam */ }
+
+  // Fallback: v10 quoteSummary
+  const summaryUrl = `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${ticker}.IS?modules=defaultKeyStatistics,price`;
+  try {
+    const d2 = await fetchWithProxy(summaryUrl);
+    const res = d2?.quoteSummary?.result?.[0];
+    if (res) {
+      const stats = res.defaultKeyStatistics || {};
+      const price_obj = res.price || {};
+      return {
+        price: price_obj.regularMarketPrice?.raw ?? null,
+        eps:   stats.trailingEps?.raw  ?? null,
+        bvps:  stats.bookValue?.raw    ?? null,
+        pe:    stats.trailingPE?.raw ?? stats.forwardPE?.raw ?? null,
+        pb:    stats.priceToBook?.raw  ?? null,
+      };
+    }
+  } catch { /* devam */ }
+
+  // Son çare: sadece fiyat için chart
+  const chartUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}.IS?range=1d&interval=1d`;
+  try {
+    const d3 = await fetchWithProxy(chartUrl, 7000);
+    const meta = d3?.chart?.result?.[0]?.meta;
+    if (meta?.regularMarketPrice) {
+      return { price: meta.regularMarketPrice, eps: null, bvps: null, pe: null, pb: null };
+    }
+  } catch { /* devam */ }
+
+  return { price: null, eps: null, bvps: null, pe: null, pb: null };
 }
 
 // ============================================================
