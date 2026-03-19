@@ -43,7 +43,7 @@ nav{position:sticky;top:0;z-index:300;background:rgba(5,8,16,.92);backdrop-filte
 #workerBanner h3{font-family:var(--ui);font-size:13px;font-weight:700;color:var(--t0);margin-bottom:4px}
 #workerBanner p{font-size:11px;color:var(--t2);line-height:1.6}
 .wrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
-.url-input{background:var(--bg2);border:1px solid var(--ln2);border-radius:6px;padding:7px 12px;color:var(--t0);font-family:var(--mono);font-size:11px;outline:none;min-width:280px;flex:1;transition:border-color .2s;}
+.url-input{background:var(--bg2);border:1px solid var(--ln2);border-radius:6px;padding:7px 12px;color:var(--t0);font-family:var(--mono);font-size:11px;outline:none;min-width:280px;flex:1;}
 .url-input:focus{border-color:var(--b)}
 .url-input::placeholder{color:var(--t3)}
 .stats{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:14px 22px;border-bottom:1px solid var(--ln);background:var(--bg1);}
@@ -54,7 +54,7 @@ nav{position:sticky;top:0;z-index:300;background:rgba(5,8,16,.92);backdrop-filte
 .stat:hover{border-color:var(--ln2)}
 .stat.active{border-color:var(--clr,var(--ln2))}
 .stat-label{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
-.stat-val{font-family:var(--ui);font-size:24px;font-weight:800;color:var(--clr,var(--t1));line-height:1;letter-spacing:-.02em}
+.stat-val{font-family:var(--ui);font-size:24px;font-weight:800;color:var(--clr,var(--t1));line-height:1}
 .stat-sub{font-size:10px;color:var(--t2);margin-top:3px}
 .s-g{--clr:var(--g)}.s-r{--clr:var(--r)}.s-y{--clr:var(--y)}.s-o{--clr:var(--o)}
 .ctrl{position:sticky;top:54px;z-index:200;background:rgba(9,13,26,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln);padding:10px 22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
@@ -77,8 +77,7 @@ select.sel option{background:var(--bg1)}
 .mbar-info{padding:9px 22px;background:rgba(74,144,255,.04);border-bottom:1px solid rgba(74,144,255,.1);display:flex;flex-wrap:wrap;gap:16px;font-size:11px;color:var(--t2);}
 .mi{display:flex;align-items:center;gap:6px}
 .mdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-/* UYARI BANDI */
-.warn-bar{padding:8px 22px;background:rgba(255,140,0,.06);border-bottom:1px solid rgba(255,140,0,.15);font-size:11px;color:var(--o);display:flex;align-items:center;gap:8px;}
+.warn-bar{padding:8px 22px;background:rgba(255,140,0,.06);border-bottom:1px solid rgba(255,140,0,.15);font-size:11px;color:var(--o);}
 .tbl-wrap{overflow:auto;padding:0 22px 48px}
 table{width:100%;border-collapse:collapse;margin-top:10px}
 thead th{position:sticky;top:0;background:var(--bg0);border-bottom:1px solid var(--ln);padding:9px 11px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--t2);font-weight:400;white-space:nowrap;cursor:pointer;user-select:none;z-index:10;}
@@ -86,7 +85,7 @@ thead th:hover{color:var(--t1)}
 thead th.srt{color:var(--g)}
 tbody tr{border-bottom:1px solid rgba(26,32,53,.7);transition:background .1s;cursor:pointer}
 tbody tr:hover{background:var(--bg3)}
-tbody tr.zarar-row{opacity:.7}
+tbody tr.zarar-row{opacity:.65}
 td{padding:9px 11px;vertical-align:middle}
 .tk{font-family:var(--ui);font-size:13px;font-weight:700;color:var(--t0)}
 .co{font-size:11px;color:var(--t2);max-width:155px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -105,19 +104,19 @@ td{padding:9px 11px;vertical-align:middle}
 .bo{background:var(--rd);color:var(--r);border:1px solid var(--rb)}
 .bz{background:var(--od);color:var(--o);border:1px solid var(--ob)}
 .bn{background:rgba(40,50,80,.1);color:var(--t2);border:1px solid var(--ln)}
-.qual{display:flex;gap:3px;align-items:center}
-.qstar{font-size:11px}
 /* MODAL */
 .overlay{position:fixed;inset:0;z-index:500;background:rgba(2,4,10,.82);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:16px;}
 .overlay.show{display:flex}
-.modal{background:var(--bg2);border:1px solid var(--ln2);border-radius:14px;width:100%;max-width:600px;max-height:92vh;overflow-y:auto;padding:26px;position:relative;}
+.modal{background:var(--bg2);border:1px solid var(--ln2);border-radius:14px;width:100%;max-width:620px;max-height:92vh;overflow-y:auto;padding:26px;position:relative;}
 .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--t2);font-size:20px;cursor:pointer;padding:4px}
 .modal-close:hover{color:var(--t0)}
 .m-ticker{font-family:var(--ui);font-size:24px;font-weight:800;color:var(--t0);margin-bottom:2px}
-.m-name{font-size:12px;color:var(--t2);margin-bottom:6px}
-.zarar-uyari{background:var(--od);border:1px solid var(--ob);border-radius:7px;padding:10px 14px;font-size:11px;color:var(--o);margin-bottom:16px;line-height:1.6;display:none}
-.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.mgrid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.m-name{font-size:12px;color:var(--t2);margin-bottom:8px}
+.alert-box{border-radius:7px;padding:10px 14px;font-size:11px;margin-bottom:14px;line-height:1.7;display:none}
+.alert-warn{background:var(--od);border:1px solid var(--ob);color:var(--o)}
+.alert-info{background:var(--bd,rgba(74,144,255,.08));border:1px solid rgba(74,144,255,.2);color:var(--b)}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.mgrid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}
 .mc{background:var(--bg3);border:1px solid var(--ln);border-radius:8px;padding:12px 14px}
 .mc-label{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
 .mc-val{font-family:var(--ui);font-size:18px;font-weight:700;color:var(--t0)}
@@ -129,14 +128,11 @@ td{padding:9px 11px;vertical-align:middle}
 .mlabel{color:var(--t2);font-size:11px}
 .mval{font-weight:500;text-align:right;color:var(--t0)}
 .mhint{text-align:right;color:var(--t2);font-size:10px}
-.quality-box{background:var(--bg3);border:1px solid var(--ln);border-radius:8px;padding:14px;margin-bottom:14px}
-.quality-title{font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
-.quality-bars{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.qb-item{display:flex;flex-direction:column;gap:4px}
-.qb-label{font-size:10px;color:var(--t2)}
-.qb-track{height:5px;background:var(--ln);border-radius:3px;overflow:hidden}
-.qb-fill{height:100%;border-radius:3px}
-.qb-val{font-size:11px;font-weight:500;color:var(--t0)}
+.debt-bar-wrap{margin-top:12px}
+.debt-label{font-size:11px;color:var(--t2);margin-bottom:6px;display:flex;justify-content:space-between}
+.debt-track{height:8px;background:var(--ln);border-radius:4px;overflow:hidden;position:relative}
+.debt-fill{height:100%;border-radius:4px;transition:width .4s}
+.debt-zones{display:flex;justify-content:space-between;font-size:9px;color:var(--t2);margin-top:4px}
 /* LOADING */
 .loading{text-align:center;padding:64px 22px}
 .ldots{display:flex;gap:5px;justify-content:center;margin-bottom:20px}
@@ -162,7 +158,7 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
 <nav>
   <div class="brand">
     <span><span style="color:var(--g)">BIST100</span> · Adil Değer</span>
-    <small>Graham · F/K · F/DD · DCF · ROE · Kalite Filtreli</small>
+    <small>Graham · F/K · F/DD · DCF · ROE · Borç İskontosu</small>
   </div>
   <div class="nav-r">
     <div class="pulse" id="pulse"></div>
@@ -187,7 +183,7 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
 </div>
 
 <div class="warn-bar">
-  ⚠️ Zararlı şirketler (negatif EPS) için adil değer hesaplanmaz — bu şirketler ayrı etiketle gösterilir. Adil değer hesabı yalnızca kârlı şirketler için geçerlidir.
+  ⚠️ Adil değer yalnızca <strong>kârlı şirketler</strong> için hesaplanır. Zararlı şirketler ayrı etiketle gösterilir. Yüksek borçlu şirketlere otomatik iskonto uygulanır.
 </div>
 
 <div class="err-banner" id="errBanner"></div>
@@ -198,7 +194,7 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
   <div class="stat s-r" onclick="setFilter('over')" id="sc-over"><div class="stat-label">❤️ Pahalı</div><div class="stat-val" id="sv-over">—</div><div class="stat-sub">marj &lt;-%20</div></div>
   <div class="stat s-y" onclick="setFilter('fair')" id="sc-fair"><div class="stat-label">🟡 Adil</div><div class="stat-val" id="sv-fair">—</div><div class="stat-sub">±%20</div></div>
   <div class="stat s-o" onclick="setFilter('loss')" id="sc-loss"><div class="stat-label">🟠 Zararlı</div><div class="stat-val" id="sv-loss">—</div><div class="stat-sub">negatif EPS</div></div>
-  <div class="stat" onclick="setFilter('na')" id="sc-na"><div class="stat-label">⬜ Veri Yok</div><div class="stat-val" id="sv-na" style="color:var(--t1)">—</div><div class="stat-sub">eksik temel veri</div></div>
+  <div class="stat" onclick="setFilter('na')" id="sc-na"><div class="stat-label">⬜ Veri Yok</div><div class="stat-val" id="sv-na" style="color:var(--t1)">—</div><div class="stat-sub">eksik veri</div></div>
 </section>
 
 <div class="ctrl">
@@ -216,8 +212,8 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
   <div class="divider"></div>
   <select class="sel" id="sectorSel" onchange="applyFilters()"><option value="">Tüm Sektörler</option></select>
   <select class="sel" id="sortSel" onchange="applyFilters()">
-    <option value="mos-d">Güvenlik Marjı ↓</option>
-    <option value="mos-a">Güvenlik Marjı ↑</option>
+    <option value="mos-d">Güvenlik Marjı ↓ (En Ucuz)</option>
+    <option value="mos-a">Güvenlik Marjı ↑ (En Pahalı)</option>
     <option value="qs-d">Kalite Skoru ↓</option>
     <option value="price-d">Fiyat ↓</option>
     <option value="pe-a">F/K ↑ En Düşük</option>
@@ -228,20 +224,22 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
 </div>
 
 <div class="mbar-info">
-  <div class="mi"><div class="mdot" style="background:#b894ff"></div><span><strong style="color:#b894ff">Graham (%30)</strong> √(22.5×EPS×BVPS) — sadece EPS&gt;0</span></div>
+  <div class="mi"><div class="mdot" style="background:#b894ff"></div><span><strong style="color:#b894ff">Graham (%30)</strong> √(22.5×EPS×BVPS)</span></div>
   <div class="mi"><div class="mdot" style="background:#7ab0ff"></div><span><strong style="color:#7ab0ff">F/K (%25)</strong> EPS×8 (TR muhafazakâr)</span></div>
   <div class="mi"><div class="mdot" style="background:var(--g)"></div><span><strong style="color:var(--g)">F/DD (%20)</strong> BVPS×1.2</span></div>
   <div class="mi"><div class="mdot" style="background:var(--y)"></div><span><strong style="color:var(--y)">DCF (%15)</strong> EPS×büyüme×7</span></div>
-  <div class="mi"><div class="mdot" style="background:#ff7a90"></div><span><strong style="color:#ff7a90">ROE (%10)</strong> BVPS×(1+ROE%/100)</span></div>
+  <div class="mi"><div class="mdot" style="background:#ff7a90"></div><span><strong style="color:#ff7a90">ROE (%10)</strong> BVPS×(1+ROE)</span></div>
+  <div class="mi"><div class="mdot" style="background:var(--o)"></div><span><strong style="color:var(--o)">Borç İskontosu</strong> D/E&gt;1→max %25 düşüş</span></div>
 </div>
 
 <div class="tbl-wrap">
   <div class="loading" id="loadingEl" style="display:none">
     <div class="ldots"><span></span><span></span><span></span></div>
     <h3>Veriler yükleniyor...</h3>
-    <p id="loadStatus">TradingView'dan gerçek zamanlı veri çekiliyor</p>
+    <p id="loadStatus">TradingView Scanner'dan veri çekiliyor</p>
     <div class="ptrack"><div class="pfill" id="pfill" style="width:8%"></div></div>
   </div>
+
   <table id="mainTable" style="display:none">
     <thead>
       <tr>
@@ -255,12 +253,14 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
         <th onclick="srt('pe')" class="hide-m">F/K<span id="ar-pe"></span></th>
         <th onclick="srt('pb')" class="hide-m">F/DD<span id="ar-pb"></span></th>
         <th onclick="srt('roe')" class="hide-m">ROE%<span id="ar-roe"></span></th>
+        <th onclick="srt('de')" class="hide-m">B/Ö<span id="ar-de"></span></th>
         <th onclick="srt('qs')" class="hide-m">Kalite<span id="ar-qs"></span></th>
         <th>Değerleme</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
   </table>
+
   <div class="empty" id="emptyEl" style="display:none">Sonuç bulunamadı.</div>
   <div class="no-worker" id="noWorkerEl">
     <div style="font-size:32px;margin-bottom:14px">⚙️</div>
@@ -275,19 +275,21 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="m-ticker" id="m-ticker"></div>
     <div class="m-name" id="m-name"></div>
-    <div class="zarar-uyari" id="m-zarar-uyari"></div>
+    <div class="alert-box" id="m-alert"></div>
 
     <div class="mgrid">
-      <div class="mc"><div class="mc-label">Güncel Fiyat</div><div class="mc-val" id="m-price">—</div><div class="mc-sub" id="m-ch">—</div></div>
+      <div class="mc"><div class="mc-label">Güncel Fiyat</div><div class="mc-val" id="m-price">—</div><div class="mc-sub" id="m-ch-txt">—</div></div>
       <div class="mc"><div class="mc-label">Adil Değer</div><div class="mc-val" id="m-fv">—</div><div class="mc-sub" id="m-mos-txt">—</div></div>
       <div class="mc"><div class="mc-label">HBK / EPS (TTM)</div><div class="mc-val" id="m-eps">—</div><div class="mc-sub" id="m-eps-sub">Hisse Başına Kazanç</div></div>
-      <div class="mc"><div class="mc-label">Defter Değeri / Hisse</div><div class="mc-val" id="m-bvps">—</div><div class="mc-sub">Book Value Per Share</div></div>
+      <div class="mc"><div class="mc-label">BVPS (Defter/Hisse)</div><div class="mc-val" id="m-bvps">—</div><div class="mc-sub">Direkt — türetilmiş değil</div></div>
     </div>
 
-    <!-- Kalite kutusu -->
-    <div class="quality-box">
-      <div class="quality-title">📊 Finansal Kalite Skoru: <strong id="m-qs-val" style="color:var(--g)">—</strong> / 100</div>
-      <div class="quality-bars" id="m-qbars"></div>
+    <!-- Borç göstergesi -->
+    <div class="debt-bar-wrap" id="m-debt-section" style="display:none">
+      <div class="debt-label"><span>Borç / Özkaynak (D/E)</span><span id="m-de-val" style="font-weight:600">—</span></div>
+      <div class="debt-track"><div class="debt-fill" id="m-de-bar"></div></div>
+      <div class="debt-zones"><span style="color:var(--g)">0 Borçsuz</span><span>1.0 Makul</span><span>2.0 Yüksek</span><span style="color:var(--r)">3+ Tehlikeli</span></div>
+      <div style="font-size:10px;color:var(--o);margin-top:6px" id="m-disc-applied"></div>
     </div>
 
     <div class="mgrid3">
@@ -305,26 +307,37 @@ footer{border-top:1px solid var(--ln);padding:14px 22px;display:flex;align-items
       <tr><td class="mlabel">🔵 F/K (%25)</td><td class="mval" id="m-fk">—</td><td class="mhint">EPS × 8</td></tr>
       <tr><td class="mlabel">🟢 F/DD (%20)</td><td class="mval" id="m-fdd">—</td><td class="mhint">BVPS × 1.2</td></tr>
       <tr><td class="mlabel">🟡 DCF-Lite (%15)</td><td class="mval" id="m-dcf">—</td><td class="mhint">EPS × büyüme × 7</td></tr>
-      <tr><td class="mlabel">🔴 ROE Bazlı (%10)</td><td class="mval" id="m-roev">—</td><td class="mhint">BVPS × (1+ROE)</td></tr>
-      <tr style="background:rgba(0,229,153,.05)">
-        <td class="mlabel" style="color:var(--t0);font-weight:600">Ağırlıklı Adil Değer</td>
-        <td class="mval" id="m-total" style="color:var(--g);font-size:17px">—</td>
-        <td class="mhint" id="m-disc-note"></td>
+      <tr><td class="mlabel">🔴 ROE Bazlı (%10)</td><td class="mval" id="m-roev">—</td><td class="mhint">BVPS × (1+ROE%)</td></tr>
+      <tr style="background:rgba(0,229,153,.04)">
+        <td class="mlabel" style="color:var(--t0);font-weight:600">Ham Adil Değer</td>
+        <td class="mval" id="m-raw">—</td><td></td>
+      </tr>
+      <tr id="m-disc-row" style="display:none">
+        <td class="mlabel" style="color:var(--o)">🟠 Borç İskontosu</td>
+        <td class="mval" id="m-disc" style="color:var(--o)">—</td>
+        <td class="mhint" id="m-disc-pct">—</td>
+      </tr>
+      <tr style="background:rgba(0,229,153,.06)">
+        <td class="mlabel" style="color:var(--t0);font-weight:700;font-size:13px">✅ Nihai Adil Değer</td>
+        <td class="mval" id="m-total" style="color:var(--g);font-size:18px">—</td><td></td>
       </tr>
     </table>
 
-    <div class="msec">Finansal Özet</div>
+    <div class="msec">Operasyonel Veriler</div>
     <table class="mtable">
       <tr><td class="mlabel">Net Kâr (TTM)</td><td class="mval" id="m-ni">—</td><td></td></tr>
       <tr><td class="mlabel">Toplam Gelir (TTM)</td><td class="mval" id="m-rev">—</td><td></td></tr>
       <tr><td class="mlabel">Brüt Kâr Marjı</td><td class="mval" id="m-gm">—</td><td></td></tr>
+      <tr><td class="mlabel">Faaliyet Marjı</td><td class="mval" id="m-om">—</td><td></td></tr>
+      <tr><td class="mlabel">52H En Yüksek</td><td class="mval" id="m-52h">—</td><td class="mhint" id="m-52h-pct"></td></tr>
+      <tr><td class="mlabel">52H En Düşük</td><td class="mval" id="m-52l">—</td><td class="mhint" id="m-52l-pct"></td></tr>
     </table>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 <footer>
-  <span>Veri: TradingView Scanner API. Yatırım tavsiyesi değildir. Adil değer yalnızca kârlı şirketler için hesaplanır.</span>
+  <span>Veri: TradingView Scanner API (gerçek zamanlı). Yatırım tavsiyesi değildir.</span>
   <span id="footerTs">—</span>
 </footer>
 
@@ -344,188 +357,204 @@ const COMPANIES = [
 
 let allData=[], filtered=[], activeFilter='all', sk='mos', sd='d';
 
-// ─────────────────────────────────────────────────────────
-// KALİTE SKORU
-// Kârlılık, borç yapısı, ROE, cari oran bazlı 0-100 puan
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
+// BORÇ İSKONTOSU
+// D/E < 1   → iskonto yok
+// D/E 1–2   → %5–15 iskonto (doğrusal)
+// D/E 2–3   → %15–25 iskonto
+// D/E > 3   → max %25 iskonto
+// Finans sektörü (banka, sigorta) hariç tutulur —
+// çünkü bankalar için yüksek D/E yapısal olarak normaldir
+// ══════════════════════════════════════════════════════════
+const FINANCE_SECTORS = ['Finance','Insurance','Banks'];
+
+function debtDiscount(de, sector) {
+  if (de == null || de <= 0) return 0;
+  if (FINANCE_SECTORS.some(s => (sector||'').includes(s))) return 0; // bankalar muaf
+  if (de <= 1)   return 0;
+  if (de <= 2)   return 0.05 + ((de - 1) / 1) * 0.10;  // %5–15
+  if (de <= 3)   return 0.15 + ((de - 2) / 1) * 0.10;  // %15–25
+  return 0.25; // max %25
+}
+
+// ══════════════════════════════════════════════════════════
+// KALİTE SKORU (0–100)
+// ══════════════════════════════════════════════════════════
 function qualityScore(d) {
   let score = 0, max = 0;
 
-  // 1. Kârlılık (30p) — EPS pozitif mi?
-  max += 30;
-  if (d.eps > 0) score += 30;
-  else if (d.eps === null) score += 0; // bilinmiyor
-
-  // 2. ROE (25p)
+  // Kârlılık (25p)
   max += 25;
+  if (d.eps > 0) score += 25;
+
+  // ROE (20p)
+  max += 20;
   if (d.roe != null) {
-    if      (d.roe >= 20) score += 25;
-    else if (d.roe >= 10) score += 15;
-    else if (d.roe >= 0)  score += 7;
-    // negatif ROE: 0
+    if      (d.roe >= 20) score += 20;
+    else if (d.roe >= 10) score += 12;
+    else if (d.roe >= 0)  score += 5;
   }
 
-  // 3. F/K makul mu? (20p) — çok yüksek F/K tehlike
+  // Borç yapısı (20p) — düşük D/E iyi
+  max += 20;
+  if (d.debtToEquity != null && !FINANCE_SECTORS.some(s=>(d.sector||'').includes(s))) {
+    if      (d.debtToEquity <= 0.5) score += 20;
+    else if (d.debtToEquity <= 1.0) score += 14;
+    else if (d.debtToEquity <= 2.0) score += 7;
+    else if (d.debtToEquity <= 3.0) score += 2;
+  } else {
+    score += 10; // finans sektörü — nötr
+    max += 0;
+  }
+
+  // F/K makullüğü (20p)
   max += 20;
   if (d.pe != null && d.pe > 0) {
-    if      (d.pe <= 8)  score += 20;
-    else if (d.pe <= 15) score += 14;
-    else if (d.pe <= 25) score += 8;
+    if      (d.pe <= 6)  score += 20;
+    else if (d.pe <= 12) score += 14;
+    else if (d.pe <= 20) score += 7;
     else                 score += 2;
   }
 
-  // 4. F/DD (15p)
+  // Likidite (15p)
   max += 15;
-  if (d.pb != null && d.pb > 0) {
-    if      (d.pb <= 1)  score += 15;
-    else if (d.pb <= 2)  score += 10;
-    else if (d.pb <= 4)  score += 5;
-  }
-
-  // 5. Cari Oran (10p)
-  max += 10;
   if (d.currentRatio != null) {
-    if      (d.currentRatio >= 2)   score += 10;
-    else if (d.currentRatio >= 1.2) score += 7;
-    else if (d.currentRatio >= 0.8) score += 3;
-    // < 0.8 likidite sıkıntısı: 0
+    if      (d.currentRatio >= 2)   score += 15;
+    else if (d.currentRatio >= 1.2) score += 10;
+    else if (d.currentRatio >= 0.8) score += 4;
   }
 
   return max > 0 ? Math.round((score / max) * 100) : null;
 }
 
-// ─────────────────────────────────────────────────────────
-// ADİL DEĞER — GERÇEKÇI MODEL
-// Sadece EPS > 0 olan şirketler için hesaplanır
-// Muhafazakâr çarpanlar, borç iskontosu yok (TV'den borç/özkaynak gelmiyor)
-// ─────────────────────────────────────────────────────────
-function calcFV(price, eps, bvps, roe) {
-  const m = {};
-
-  // EPS negatifse hesaplama yok
-  if (eps === null || eps <= 0) {
-    // Sadece F/DD bazlı göster (çok muhafazakâr)
-    if (bvps > 0) {
-      m.fdd = bvps * 1.0; // 1x defter — en muhafazakâr taban
-      const fv = m.fdd;
-      return { fv, m, mos: ((fv - price) / price) * 100, lossCompany: true };
-    }
-    return { fv: null, m, mos: null, lossCompany: true };
+// ══════════════════════════════════════════════════════════
+// ADİL DEĞER HESABI
+// ══════════════════════════════════════════════════════════
+function calcFV(price, eps, bvps, roe, debtToEquity, sector) {
+  // Zararlı şirket
+  if (eps !== null && eps <= 0) {
+    return { fv: null, raw: null, m: {}, mos: null, lossCompany: true, discount: 0 };
   }
 
+  const m = {};
   let ws = 0, wt = 0;
 
   // Graham (30%) — sadece EPS>0 ve BVPS>0
-  if (bvps > 0) {
+  if (eps > 0 && bvps > 0) {
     m.graham = Math.sqrt(22.5 * eps * bvps);
     ws += m.graham * .30; wt += .30;
   }
 
-  // F/K (25%) — Türkiye için muhafazakâr 8x (enflasyon ortamı)
-  m.fk = eps * 8;
-  ws += m.fk * .25; wt += .25;
+  // F/K (25%) — Türkiye için 8x
+  if (eps > 0) {
+    m.fk = eps * 8;
+    ws += m.fk * .25; wt += .25;
+  }
 
-  // F/DD (20%) — 1.2x defter (eski 1.5'ten düşürüldü)
+  // F/DD (20%) — 1.2x defter
   if (bvps > 0) {
     m.fdd = bvps * 1.2;
     ws += m.fdd * .20; wt += .20;
   }
 
-  // DCF-Lite (15%) — büyüme çarpanı 7x (eski 8'den)
-  if (price > 0) {
-    const ey = eps / price; // kazanç verimi
-    const gf = Math.min(2.5, Math.max(1, 1 + ey * 4)); // büyüme faktörü sınırlandı
+  // DCF-Lite (15%)
+  if (eps > 0 && price > 0) {
+    const ey = eps / price;
+    const gf = Math.min(2.5, Math.max(1, 1 + ey * 4));
     m.dcf = eps * gf * 7;
     ws += m.dcf * .15; wt += .15;
   }
 
   // ROE bazlı (10%)
   if (bvps > 0 && roe != null && roe > 0) {
-    m.roe = bvps * (1 + Math.min(roe, 40) / 100); // ROE %40'ta sınırla
+    m.roe = bvps * (1 + Math.min(roe, 40) / 100);
     ws += m.roe * .10; wt += .10;
   }
 
-  if (wt === 0) return { fv: null, m, mos: null, lossCompany: false };
+  if (wt === 0) return { fv: null, raw: null, m, mos: null, lossCompany: false, discount: 0 };
 
-  const fv  = ws / wt;
-  const mos = ((fv - price) / price) * 100;
-  return { fv, m, mos, lossCompany: false };
+  const raw = ws / wt;
+
+  // Borç iskontosu uygula
+  const disc = debtDiscount(debtToEquity, sector);
+  const fv   = raw * (1 - disc);
+  const mos  = ((fv - price) / price) * 100;
+
+  return { fv, raw, m, mos, lossCompany: false, discount: disc };
 }
 
-// Değerleme kategorisi
 function valOf(d) {
   if (d.lossCompany) return 'loss';
   if (d.mos == null) return 'na';
-  if (d.mos > 20)  return 'under';
-  if (d.mos < -20) return 'over';
+  if (d.mos > 20)   return 'under';
+  if (d.mos < -20)  return 'over';
   return 'fair';
 }
 
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 // VERİ YÜKLEMESİ
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 async function loadData() {
-  const workerUrl = (localStorage.getItem('bist_worker_url') || '').trim();
-  if (!workerUrl) {
-    show('noWorkerEl'); hide('mainTable'); hide('loadingEl'); return;
-  }
+  const workerUrl = (localStorage.getItem('bist_worker_url')||'').trim();
+  if (!workerUrl) { show('noWorkerEl'); hide('mainTable'); hide('loadingEl'); return; }
   setLoading(true); showErr('');
   hide('noWorkerEl'); hide('mainTable'); show('loadingEl','block');
 
-  const BATCH = 50;
   const results = [];
+  const BATCH = 50;
 
   for (let i = 0; i < COMPANIES.length; i += BATCH) {
     const batch = COMPANIES.slice(i, i + BATCH);
-    setProg(Math.round((i / COMPANIES.length) * 90), `${i}/${COMPANIES.length} şirket işleniyor...`);
+    setProg(Math.round((i/COMPANIES.length)*90), `${i}/${COMPANIES.length} işleniyor...`);
     try {
-      const r = await fetch(workerUrl.replace(/\/$/,'') + '/quotes?symbols=' + batch.join(','));
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const r = await fetch(workerUrl.replace(/\/$/,'')+'/quotes?symbols='+batch.join(','));
+      if (!r.ok) throw new Error('HTTP '+r.status);
       const j = await r.json();
-      if (!j.ok) throw new Error(j.error || 'Worker hatası');
+      if (!j.ok) throw new Error(j.error||'Worker hatası');
       for (const q of j.data) {
-        const { fv, m, mos, lossCompany } = calcFV(q.price, q.eps, q.bvps, q.roe);
-        const qs = qualityScore({ ...q });
-        results.push({ ...q, fv, m, mos, lossCompany, qs });
+        const {fv,raw,m,mos,lossCompany,discount} = calcFV(q.price,q.eps,q.bvps,q.roe,q.debtToEquity,q.sector);
+        const qs = qualityScore(q);
+        results.push({...q, fv, raw, m, mos, lossCompany, discount, qs});
       }
     } catch(e) {
-      showErr('Hata: ' + e.message);
+      showErr('Hata: '+e.message);
       setLoading(false); hide('loadingEl'); show('noWorkerEl'); return;
     }
     await sleep(80);
   }
 
-  // Veri gelmeyen şirketler
-  const loaded = new Set(results.map(r => r.ticker));
+  // Eksik şirketler
+  const loaded = new Set(results.map(r=>r.ticker));
   for (const t of COMPANIES) {
-    if (!loaded.has(t)) results.push({ ticker:t, name:t, price:null, changePct:null, eps:null, bvps:null, pe:null, pb:null, roe:null, divYield:null, netIncome:null, revenue:null, grossMargin:null, currentRatio:null, marketCap:null, sector:null, fv:null, m:{}, mos:null, lossCompany:false, qs:null });
+    if (!loaded.has(t)) results.push({ticker:t,name:t,price:null,changePct:null,eps:null,bvps:null,pe:null,pb:null,roe:null,divYield:null,netIncome:null,revenue:null,grossMargin:null,operatingMargin:null,currentRatio:null,debtToEquity:null,marketCap:null,sector:null,week52High:null,week52Low:null,fv:null,raw:null,m:{},mos:null,lossCompany:false,discount:0,qs:null});
   }
 
   allData = results;
-  setProg(100, 'Tamamlandı');
+  setProg(100,'Tamamlandı');
   await sleep(200);
   hide('loadingEl'); show('mainTable','table');
   buildSectors(); updateStats(); applyFilters();
 
   const ts = new Date().toLocaleDateString('tr-TR')+' '+new Date().toLocaleTimeString('tr-TR');
   document.getElementById('tsLabel').textContent = ts;
-  document.getElementById('footerTs').textContent = 'Son güncelleme: ' + ts;
+  document.getElementById('footerTs').textContent = 'Son güncelleme: '+ts;
   setPulse('on'); setLoading(false);
-  const profitable = results.filter(r => r.eps > 0).length;
-  const loss = results.filter(r => r.eps !== null && r.eps <= 0).length;
-  toast(`✓ ${results.filter(r=>r.price).length} şirket · ${profitable} kârlı · ${loss} zararlı`);
+  const profitable=results.filter(r=>r.eps>0).length;
+  const loss=results.filter(r=>r.eps!==null&&r.eps<=0).length;
+  const withDisc=results.filter(r=>r.discount>0).length;
+  toast(`✓ ${results.filter(r=>r.price).length} şirket · ${profitable} kârlı · ${loss} zararlı · ${withDisc} borç iskontosu uygulandı`);
 }
 
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 // FİLTRE & SIRALAMA
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 function setFilter(f) {
   activeFilter = f;
-  ['all','under','over','fair','loss','na'].forEach(id => {
-    const el = document.getElementById('pill-'+id);
-    if (el) el.className = el.className.replace(/ on/g,'') + (id===f?' on':'');
-    const sc = document.getElementById('sc-'+id);
-    if (sc) sc.classList.toggle('active', id===f);
+  ['all','under','over','fair','loss','na'].forEach(id=>{
+    const el=document.getElementById('pill-'+id);
+    if(el) el.className=el.className.replace(/ on/g,'')+(id===f?' on':'');
+    const sc=document.getElementById('sc-'+id);
+    if(sc) sc.classList.toggle('active',id===f);
   });
   applyFilters();
 }
@@ -534,176 +563,178 @@ function applyFilters() {
   const q   = document.getElementById('searchInput').value.toLowerCase();
   const sec = document.getElementById('sectorSel').value;
   const sv  = document.getElementById('sortSel').value;
-  const pts = sv.split('-'); sk = pts.slice(0,-1).join('-'); sd = pts[pts.length-1];
+  const pts = sv.split('-'); sk=pts.slice(0,-1).join('-'); sd=pts[pts.length-1];
 
-  filtered = allData.filter(d => {
-    if (q && !d.ticker.toLowerCase().includes(q) && !(d.name||'').toLowerCase().includes(q)) return false;
-    if (sec && d.sector !== sec) return false;
-    const v = valOf(d);
-    if (activeFilter === 'under' && v !== 'under') return false;
-    if (activeFilter === 'over'  && v !== 'over')  return false;
-    if (activeFilter === 'fair'  && v !== 'fair')  return false;
-    if (activeFilter === 'loss'  && v !== 'loss')  return false;
-    if (activeFilter === 'na'    && v !== 'na')    return false;
+  filtered = allData.filter(d=>{
+    if(q&&!d.ticker.toLowerCase().includes(q)&&!(d.name||'').toLowerCase().includes(q)) return false;
+    if(sec&&d.sector!==sec) return false;
+    const v=valOf(d);
+    if(activeFilter==='under'&&v!=='under') return false;
+    if(activeFilter==='over' &&v!=='over')  return false;
+    if(activeFilter==='fair' &&v!=='fair')  return false;
+    if(activeFilter==='loss' &&v!=='loss')  return false;
+    if(activeFilter==='na'   &&v!=='na')    return false;
     return true;
   });
 
-  filtered.sort((a,b) => {
-    if (sk==='ticker'||sk==='name') {
-      const ka=sk==='ticker'?a.ticker:a.name||'', kb=sk==='ticker'?b.ticker:b.name||'';
+  filtered.sort((a,b)=>{
+    if(sk==='ticker'||sk==='name'){
+      const ka=sk==='ticker'?a.ticker:a.name||'',kb=sk==='ticker'?b.ticker:b.name||'';
       return sd==='a'?ka.localeCompare(kb):kb.localeCompare(ka);
     }
-    const M = {
-      mos:  [a.mos??-9999, b.mos??-9999],
-      price:[a.price??0,   b.price??0],
-      fv:   [a.fv??0,      b.fv??0],
-      pe:   [a.pe??9999,   b.pe??9999],
-      pb:   [a.pb??9999,   b.pb??9999],
-      roe:  [a.roe??-999,  b.roe??-999],
-      qs:   [a.qs??-1,     b.qs??-1],
-      ch:   [a.changePct??-999, b.changePct??-999],
-    };
-    const [av,bv] = M[sk]||M.mos;
+    const M={mos:[a.mos??-9999,b.mos??-9999],price:[a.price??0,b.price??0],fv:[a.fv??0,b.fv??0],pe:[a.pe??9999,b.pe??9999],pb:[a.pb??9999,b.pb??9999],roe:[a.roe??-999,b.roe??-999],qs:[a.qs??-1,b.qs??-1],de:[a.debtToEquity??-1,b.debtToEquity??-1],ch:[a.changePct??-999,b.changePct??-999]};
+    const[av,bv]=M[sk]||M.mos;
     return sd==='d'?bv-av:av-bv;
   });
   renderTable();
 }
 
-function srt(key) {
+function srt(key){
   if(sk===key) sd=sd==='d'?'a':'d'; else{sk=key;sd='d';}
-  document.getElementById('sortSel').value = sk+'-'+sd;
-  ['ticker','name','price','ch','fv','mos','pe','pb','roe','qs'].forEach(k=>{
+  document.getElementById('sortSel').value=sk+'-'+sd;
+  ['ticker','name','price','ch','fv','mos','pe','pb','roe','de','qs'].forEach(k=>{
     const el=document.getElementById('ar-'+k);
     if(el){el.textContent=sk===k?(sd==='d'?' ↓':' ↑'):'';el.closest('th').classList.toggle('srt',sk===k);}
   });
   applyFilters();
 }
 
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 // RENDER
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 function f(v,d=2){if(v==null||isNaN(v))return'<span class="na">—</span>';return v.toLocaleString('tr-TR',{minimumFractionDigits:d,maximumFractionDigits:d});}
 function fr(v,d=2){if(v==null||isNaN(v))return'—';return v.toLocaleString('tr-TR',{minimumFractionDigits:d,maximumFractionDigits:d});}
-
-function qColor(qs) {
-  if (qs==null) return 'var(--t2)';
-  if (qs>=70) return 'var(--g)';
-  if (qs>=45) return 'var(--y)';
-  return 'var(--r)';
-}
+function qColor(qs){if(qs==null)return'var(--t2)';if(qs>=70)return'var(--g)';if(qs>=45)return'var(--y)';return'var(--r)';}
+function deColor(de){if(de==null)return'var(--t2)';if(de<=1)return'var(--g)';if(de<=2)return'var(--y)';return'var(--r)';}
 
 function renderTable() {
-  const tbody = document.getElementById('tbody');
-  if (!filtered.length) { tbody.innerHTML=''; document.getElementById('emptyEl').style.display='block'; return; }
+  const tbody=document.getElementById('tbody');
+  if(!filtered.length){tbody.innerHTML='';document.getElementById('emptyEl').style.display='block';return;}
   document.getElementById('emptyEl').style.display='none';
 
-  tbody.innerHTML = filtered.map((d,i) => {
-    const v   = valOf(d);
-    const bc  = {under:'bu',fair:'bf',over:'bo',loss:'bz',na:'bn'}[v];
-    const bt  = {under:'UCUZ',fair:'ADİL',over:'PAHALI',loss:'ZARARDA',na:'VERİ YOK'}[v];
-    const ma  = d.mos==null||v==='loss'?0:Math.min(100,Math.abs(d.mos)*1.3);
-    const mc  = d.mos==null?'var(--t2)':d.mos>0?'var(--g)':'var(--r)';
-    const mcl = d.mos==null?'neu':d.mos>0?'pos':'neg';
-    const ms  = (v==='loss')? '<span class="na">—</span>' : d.mos!=null?(d.mos>0?'+':'')+d.mos.toFixed(1)+'%':'—';
-    const ccl = !d.changePct?'fl':d.changePct>0?'up':'dn';
-    const cs  = d.changePct!=null?(d.changePct>0?'+':'')+d.changePct.toFixed(2)+'%':'—';
-    const qsc = d.qs!=null ? `<span style="color:${qColor(d.qs)};font-weight:600">${d.qs}</span>` : '<span class="na">—</span>';
-    const roe = d.roe!=null?(d.roe>=0?'<span style="color:var(--g)">+':'<span style="color:var(--r)">')+d.roe.toFixed(1)+'%</span>':'<span class="na">—</span>';
-    const rowCls = v==='loss'?'zarar-row':'';
+  tbody.innerHTML=filtered.map((d,i)=>{
+    const v=valOf(d);
+    const bc={under:'bu',fair:'bf',over:'bo',loss:'bz',na:'bn'}[v];
+    const bt={under:'UCUZ',fair:'ADİL',over:'PAHALI',loss:'ZARARDA',na:'VERİ YOK'}[v];
+    const ma=d.mos==null||v==='loss'?0:Math.min(100,Math.abs(d.mos)*1.3);
+    const mc=d.mos==null?'var(--t2)':d.mos>0?'var(--g)':'var(--r)';
+    const mcl=d.mos==null?'neu':d.mos>0?'pos':'neg';
+    const ms=v==='loss'?'<span class="na">—</span>':d.mos!=null?(d.mos>0?'+':'')+d.mos.toFixed(1)+'%':'—';
+    const ccl=!d.changePct?'fl':d.changePct>0?'up':'dn';
+    const cs=d.changePct!=null?(d.changePct>0?'+':'')+d.changePct.toFixed(2)+'%':'—';
+    const qsc=d.qs!=null?`<span style="color:${qColor(d.qs)};font-weight:600">${d.qs}</span>`:'<span class="na">—</span>';
+    const dec=d.debtToEquity!=null?`<span style="color:${deColor(d.debtToEquity)}">${fr(d.debtToEquity,2)}</span>`:'<span class="na">—</span>';
+    const discBadge=d.discount>0?` <span style="font-size:9px;color:var(--o)">-${Math.round(d.discount*100)}%</span>`:'';
+    const fvCell=v==='loss'?'<span class="na">Zararda</span>':f(d.fv)+discBadge;
 
-    return `<tr onclick="openModal(${i})" class="${rowCls}">
+    return `<tr onclick="openModal(${i})" class="${v==='loss'?'zarar-row':''}">
       <td class="tk">${d.ticker}</td>
       <td><div class="co" title="${d.name||''}">${d.name||d.ticker}</div></td>
       <td class="hide-m"><span class="sec">${d.sector||'—'}</span></td>
       <td class="pr">${f(d.price)}</td>
       <td class="ch ${ccl}">${cs}</td>
-      <td>${v==='loss'?'<span class="na">Zararda</span>':f(d.fv)}</td>
+      <td>${fvCell}</td>
       <td><div class="mbar-row"><div class="mbar-bg"><div class="mbar-fill" style="width:${ma}%;background:${mc}"></div></div><span class="mv ${mcl}">${ms}</span></div></td>
       <td class="hide-m">${f(d.pe,1)}</td>
       <td class="hide-m">${f(d.pb,2)}</td>
-      <td class="hide-m">${roe}</td>
+      <td class="hide-m">${d.roe!=null?`<span style="color:${d.roe>=0?'var(--g)':'var(--r)'}">${d.roe>=0?'+':''}${fr(d.roe,1)}%</span>`:'<span class="na">—</span>'}</td>
+      <td class="hide-m">${dec}</td>
       <td class="hide-m">${qsc}</td>
       <td><span class="bdg ${bc}">${bt}</span></td>
     </tr>`;
   }).join('');
 }
 
-// ─────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════
 // MODAL
-// ─────────────────────────────────────────────────────────
-function openModal(idx) {
-  const d = filtered[idx]; if (!d) return;
-  const v = valOf(d);
+// ══════════════════════════════════════════════════════════
+function openModal(idx){
+  const d=filtered[idx]; if(!d) return;
+  const v=valOf(d);
 
-  document.getElementById('m-ticker').textContent = d.ticker;
-  document.getElementById('m-name').textContent   = (d.name||d.ticker) + (d.sector?' · '+d.sector:'');
+  document.getElementById('m-ticker').textContent=d.ticker;
+  document.getElementById('m-name').textContent=(d.name||d.ticker)+(d.sector?' · '+d.sector:'');
 
-  // Zarar uyarısı
-  const zu = document.getElementById('m-zarar-uyari');
-  if (d.lossCompany && d.eps !== null) {
-    zu.style.display='block';
-    zu.textContent = '⚠️ Bu şirket son 12 ayda ZARAR etmiştir (EPS: '+fr(d.eps)+' ₺). Graham, F/K ve DCF yöntemleri uygulanamaz. Adil değer hesabı güvenilir değildir — yalnızca defter değeri baz alınmıştır.';
-  } else if (d.eps === null) {
-    zu.style.display='block';
-    zu.textContent = 'ℹ️ EPS verisi mevcut değil — adil değer hesaplanamamıştır.';
-  } else {
-    zu.style.display='none';
-  }
+  // Alert kutusu
+  const al=document.getElementById('m-alert');
+  if(d.lossCompany&&d.eps!==null){
+    al.style.display='block'; al.className='alert-box alert-warn';
+    al.textContent='⚠️ Şirket zararda (EPS: '+fr(d.eps)+' ₺). Graham, F/K ve DCF hesaplanamaz. Adil değer güvenilmez.';
+  } else if(d.eps===null){
+    al.style.display='block'; al.className='alert-box alert-info';
+    al.textContent='ℹ️ EPS verisi mevcut değil — adil değer hesaplanamadı.';
+  } else { al.style.display='none'; }
 
-  document.getElementById('m-price').textContent = d.price?fr(d.price)+' ₺':'—';
-  document.getElementById('m-ch').textContent    = d.changePct!=null?(d.changePct>0?'▲ +':'▼ ')+d.changePct.toFixed(2)+'% bugün':'—';
+  document.getElementById('m-price').textContent=d.price?fr(d.price)+' ₺':'—';
+  document.getElementById('m-ch-txt').textContent=d.changePct!=null?(d.changePct>0?'▲ +':'▼ ')+d.changePct.toFixed(2)+'% bugün':'—';
 
-  const epsEl = document.getElementById('m-eps');
-  epsEl.textContent = d.eps!=null?fr(d.eps)+' ₺':'—';
-  epsEl.style.color = d.eps!=null&&d.eps<0?'var(--r)':'var(--t0)';
-  document.getElementById('m-eps-sub').textContent = d.eps!=null&&d.eps<0?'⚠️ Negatif EPS — şirket zararda':'Hisse Başına Kazanç';
+  const epsEl=document.getElementById('m-eps');
+  epsEl.textContent=d.eps!=null?fr(d.eps)+' ₺':'—';
+  epsEl.style.color=d.eps!=null&&d.eps<0?'var(--r)':'var(--t0)';
+  document.getElementById('m-eps-sub').textContent=d.eps!=null&&d.eps<0?'⚠️ Negatif — şirket zararda':'Hisse Başına Kazanç (TTM)';
+  document.getElementById('m-bvps').textContent=d.bvps?fr(d.bvps)+' ₺':'—';
 
-  document.getElementById('m-bvps').textContent = d.bvps?fr(d.bvps)+' ₺':'—';
-
-  const fvEl = document.getElementById('m-fv');
-  fvEl.textContent = d.fv?fr(d.fv)+' ₺':'—';
-  fvEl.style.color = v==='under'?'var(--g)':v==='over'?'var(--r)':v==='loss'?'var(--o)':'var(--y)';
-  document.getElementById('m-mos-txt').textContent = d.mos!=null
+  const fvEl=document.getElementById('m-fv');
+  fvEl.textContent=d.fv?fr(d.fv)+' ₺':'—';
+  fvEl.style.color=v==='under'?'var(--g)':v==='over'?'var(--r)':v==='loss'?'var(--o)':'var(--y)';
+  document.getElementById('m-mos-txt').textContent=d.mos!=null
     ?(d.mos>0?'Adil değerin %'+Math.abs(d.mos).toFixed(1)+' ALTI':'Adil değerin %'+Math.abs(d.mos).toFixed(1)+' ÜSTÜ')
     :'Hesaplanamadı';
 
-  // Kalite skoru
-  document.getElementById('m-qs-val').textContent = d.qs!=null?d.qs:'—';
-  document.getElementById('m-qs-val').style.color = qColor(d.qs);
+  // Borç göstergesi
+  const deSection=document.getElementById('m-debt-section');
+  if(d.debtToEquity!=null){
+    deSection.style.display='block';
+    document.getElementById('m-de-val').textContent=fr(d.debtToEquity,2)+'×';
+    document.getElementById('m-de-val').style.color=deColor(d.debtToEquity);
+    const barW=Math.min(100,(d.debtToEquity/3)*100);
+    const barCol=deColor(d.debtToEquity);
+    document.getElementById('m-de-bar').style.width=barW+'%';
+    document.getElementById('m-de-bar').style.background=barCol;
+    const discEl=document.getElementById('m-disc-applied');
+    if(d.discount>0){
+      discEl.textContent=`→ Yüksek borç nedeniyle adil değere %${Math.round(d.discount*100)} iskonto uygulandı`;
+    } else if(FINANCE_SECTORS.some(s=>(d.sector||'').includes(s))){
+      discEl.textContent='→ Finans sektörü — borç iskontosu uygulanmaz';
+    } else {
+      discEl.textContent='→ D/E ≤ 1.0, borç iskontosu uygulanmadı';
+    }
+  } else { deSection.style.display='none'; }
 
-  const qbars = [
-    { label:'Kârlılık', val: d.eps!=null?(d.eps>0?100:0):null, color:'var(--g)' },
-    { label:'ROE', val: d.roe!=null?Math.max(0,Math.min(100,(d.roe/30)*100)):null, color:'var(--b)' },
-    { label:'F/K Uygun', val: d.pe!=null&&d.pe>0?Math.max(0,Math.min(100,(1-(d.pe-4)/21)*100)):null, color:'var(--v)' },
-    { label:'Likidite', val: d.currentRatio!=null?Math.min(100,(d.currentRatio/2)*100):null, color:'var(--y)' },
-  ];
-  document.getElementById('m-qbars').innerHTML = qbars.map(qb => `
-    <div class="qb-item">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <span class="qb-label">${qb.label}</span>
-        <span class="qb-val" style="color:${qb.color}">${qb.val!=null?Math.round(qb.val):'—'}</span>
-      </div>
-      <div class="qb-track"><div class="qb-fill" style="width:${qb.val??0}%;background:${qb.color}"></div></div>
-    </div>`).join('');
+  document.getElementById('m-pe2').textContent=d.pe?fr(d.pe,1)+'×':'—';
+  document.getElementById('m-pb2').textContent=d.pb?fr(d.pb,2)+'×':'—';
+  document.getElementById('m-roe2').textContent=d.roe!=null?fr(d.roe,1)+'%':'—';
+  document.getElementById('m-div').textContent=d.divYield?fr(d.divYield,2)+'%':'—';
+  document.getElementById('m-cr').textContent=d.currentRatio?fr(d.currentRatio,2):'—';
+  document.getElementById('m-mc').textContent=d.marketCap?fmtMC(d.marketCap):'—';
 
-  document.getElementById('m-pe2').textContent  = d.pe?fr(d.pe,1)+'×':'—';
-  document.getElementById('m-pb2').textContent  = d.pb?fr(d.pb,2)+'×':'—';
-  document.getElementById('m-roe2').textContent = d.roe!=null?fr(d.roe,1)+'%':'—';
-  document.getElementById('m-div').textContent  = d.divYield?fr(d.divYield,2)+'%':'—';
-  document.getElementById('m-cr').textContent   = d.currentRatio?fr(d.currentRatio,2):'—';
-  document.getElementById('m-mc').textContent   = d.marketCap?fmtMC(d.marketCap):'—';
+  document.getElementById('m-graham').textContent=d.m?.graham?fr(d.m.graham)+' ₺':'—';
+  document.getElementById('m-fk').textContent=d.m?.fk?fr(d.m.fk)+' ₺':'—';
+  document.getElementById('m-fdd').textContent=d.m?.fdd?fr(d.m.fdd)+' ₺':'—';
+  document.getElementById('m-dcf').textContent=d.m?.dcf?fr(d.m.dcf)+' ₺':'—';
+  document.getElementById('m-roev').textContent=d.m?.roe?fr(d.m.roe)+' ₺':'—';
+  document.getElementById('m-raw').textContent=d.raw?fr(d.raw)+' ₺':'—';
 
-  document.getElementById('m-graham').textContent = d.m?.graham?fr(d.m.graham)+' ₺':'—';
-  document.getElementById('m-fk').textContent     = d.m?.fk?fr(d.m.fk)+' ₺':'—';
-  document.getElementById('m-fdd').textContent    = d.m?.fdd?fr(d.m.fdd)+' ₺':'—';
-  document.getElementById('m-dcf').textContent    = d.m?.dcf?fr(d.m.dcf)+' ₺':'—';
-  document.getElementById('m-roev').textContent   = d.m?.roe?fr(d.m.roe)+' ₺':'—';
-  document.getElementById('m-total').textContent  = d.fv?fr(d.fv)+' ₺':'—';
-  document.getElementById('m-disc-note').textContent = d.lossCompany?'⚠️ Güvenilmez':'';
+  const discRow=document.getElementById('m-disc-row');
+  if(d.discount>0){
+    discRow.style.display='';
+    document.getElementById('m-disc').textContent='−'+fr(d.raw*d.discount)+' ₺';
+    document.getElementById('m-disc-pct').textContent='-%'+Math.round(d.discount*100)+' borç iskontosu';
+  } else { discRow.style.display='none'; }
 
-  document.getElementById('m-ni').textContent  = d.netIncome?fmtMC(d.netIncome):'—';
-  document.getElementById('m-rev').textContent = d.revenue?fmtMC(d.revenue):'—';
-  document.getElementById('m-gm').textContent  = d.grossMargin!=null?fr(d.grossMargin,1)+'%':'—';
+  document.getElementById('m-total').textContent=d.fv?fr(d.fv)+' ₺':'—';
+
+  document.getElementById('m-ni').textContent=d.netIncome?fmtMC(d.netIncome):'—';
+  document.getElementById('m-rev').textContent=d.revenue?fmtMC(d.revenue):'—';
+  document.getElementById('m-gm').textContent=d.grossMargin!=null?fr(d.grossMargin,1)+'%':'—';
+  document.getElementById('m-om').textContent=d.operatingMargin!=null?fr(d.operatingMargin,1)+'%':'—';
+
+  // 52H göstergesi
+  const h52=d.week52High, l52=d.week52Low, price=d.price;
+  document.getElementById('m-52h').textContent=h52?fr(h52)+' ₺':'—';
+  document.getElementById('m-52l').textContent=l52?fr(l52)+' ₺':'—';
+  document.getElementById('m-52h-pct').textContent=h52&&price?'şu anki fiyat zirveden %'+Math.abs(((price-h52)/h52)*100).toFixed(1)+' aşağıda':'';
+  document.getElementById('m-52l-pct').textContent=l52&&price?'şu anki fiyat dibinden %'+((price-l52)/l52*100).toFixed(1)+' yukarıda':'';
 
   document.getElementById('overlay').classList.add('show');
   document.body.style.overflow='hidden';
@@ -711,10 +742,8 @@ function openModal(idx) {
 
 function closeModal(e){if(e&&e.target!==document.getElementById('overlay'))return;document.getElementById('overlay').classList.remove('show');document.body.style.overflow='';}
 function fmtMC(n){if(!n)return'—';if(n>=1e12)return(n/1e12).toFixed(2)+' T ₺';if(n>=1e9)return(n/1e9).toFixed(2)+' Mr ₺';if(n>=1e6)return(n/1e6).toFixed(2)+' Mn ₺';return fr(n)+' ₺';}
+const FINANCE_SECTORS=['Finance','Insurance','Banks'];
 
-// ─────────────────────────────────────────────────────────
-// YARDIMCILAR
-// ─────────────────────────────────────────────────────────
 function buildSectors(){
   const sects=[...new Set(allData.map(d=>d.sector).filter(Boolean))].sort();
   const sel=document.getElementById('sectorSel');
@@ -723,39 +752,29 @@ function buildSectors(){
 }
 function updateStats(){
   const wp=allData.filter(d=>d.price);
-  document.getElementById('sv-all').textContent   = allData.length;
-  document.getElementById('sv-under').textContent = wp.filter(d=>valOf(d)==='under').length;
-  document.getElementById('sv-over').textContent  = wp.filter(d=>valOf(d)==='over').length;
-  document.getElementById('sv-fair').textContent  = wp.filter(d=>valOf(d)==='fair').length;
-  document.getElementById('sv-loss').textContent  = allData.filter(d=>valOf(d)==='loss').length;
-  document.getElementById('sv-na').textContent    = allData.filter(d=>valOf(d)==='na').length;
+  document.getElementById('sv-all').textContent=allData.length;
+  document.getElementById('sv-under').textContent=wp.filter(d=>valOf(d)==='under').length;
+  document.getElementById('sv-over').textContent=wp.filter(d=>valOf(d)==='over').length;
+  document.getElementById('sv-fair').textContent=wp.filter(d=>valOf(d)==='fair').length;
+  document.getElementById('sv-loss').textContent=allData.filter(d=>valOf(d)==='loss').length;
+  document.getElementById('sv-na').textContent=allData.filter(d=>valOf(d)==='na').length;
 }
-function show(id,disp='block'){document.getElementById(id).style.display=disp;}
+function show(id,d='block'){document.getElementById(id).style.display=d;}
 function hide(id){document.getElementById(id).style.display='none';}
 function setPulse(s){document.getElementById('pulse').className='pulse '+s;}
 function setLoading(on){const b=document.getElementById('refreshBtn');b.disabled=on;b.classList.toggle('loading',on);if(on)setPulse('spin');}
 function setProg(p,msg){document.getElementById('pfill').style.width=p+'%';document.getElementById('loadStatus').textContent=msg;}
 function showErr(msg){const el=document.getElementById('errBanner');el.style.display=msg?'block':'none';el.textContent=msg;}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000);}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),5000);}
 function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
-function saveWorkerUrl(){
-  const v=document.getElementById('workerUrl').value.trim();
-  if(!v||!v.startsWith('http')){toast('Geçerli bir URL gir');return;}
-  localStorage.setItem('bist_worker_url',v);
-  toast('✓ Kaydedildi');
-  hide('workerBanner');
-  loadData();
-}
+function saveWorkerUrl(){const v=document.getElementById('workerUrl').value.trim();if(!v||!v.startsWith('http')){toast('Geçerli URL gir');return;}localStorage.setItem('bist_worker_url',v);toast('✓ Kaydedildi');hide('workerBanner');loadData();}
 function dismissBanner(){localStorage.setItem('bist_banner_dismissed','1');hide('workerBanner');}
 
 (function init(){
   const saved=localStorage.getItem('bist_worker_url');
   const dismissed=localStorage.getItem('bist_banner_dismissed');
-  if(saved){
-    document.getElementById('workerUrl').value=saved;
-    if(dismissed)hide('workerBanner');
-    loadData();
-  } else { setPulse('idle'); }
+  if(saved){document.getElementById('workerUrl').value=saved;if(dismissed)hide('workerBanner');loadData();}
+  else setPulse('idle');
 })();
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal({});});
 </script>
